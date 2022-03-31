@@ -1,4 +1,4 @@
-﻿#ifndef _list_hpp
+﻿git@github.com:NOOB2033/Stack.git#ifndef _list_hpp
 #define _list_hpp
 
 
@@ -244,7 +244,7 @@ list<Type, Alloc>::list(const list& oth)
 /* Если аллокатор не переопределил select_on_cont.... То возвращаем то же аллокатор */
 	: list(std::allocator_traits<Alloc>::select_on_container_copy_construction(oth.rebind_alloc))
 {
-	if (oth.head != nullptr)
+	if (oth.head == nullptr)
 		return;
 
 	head = AllocTraits::allocate(rebind_alloc, 1);
